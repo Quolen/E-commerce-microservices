@@ -1,0 +1,48 @@
+# Ignore build output directories
+target/
+build/
+
+# Maven Wrapper files (except wrapper jar)
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS (Spring Tool Suite) specific ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+# Ignore everything in .idea but allow specific configurations if needed
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/misc.xml
+.idea/modules.xml
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Visual Studio Code ###
+.vscode/
+
+# Ignore node_modules if any frontend project exists
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
