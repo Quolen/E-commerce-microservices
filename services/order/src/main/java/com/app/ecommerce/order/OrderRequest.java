@@ -1,0 +1,26 @@
+package com.app.ecommerce.order;
+
+import com.app.ecommerce.product.PurchaseRequest;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+public record OrderRequest(
+        Long id,
+        String reference,
+        @Positive(message = "Order amount should be positive")
+        BigDecimal amount,
+        @NotNull(message = "Payment method cannot be null")
+        PaymentMethod paymentMethod,
+        @NotNull(message = "Customer id cannot be null")
+        @NotEmpty(message = "Customer id cannot be null")
+        @NotBlank(message = "Customer id cannot be null")
+        String customerId,
+        @NotEmpty(message = "Choose at least one product")
+        List<PurchaseRequest> products
+) {
+}
